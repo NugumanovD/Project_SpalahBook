@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7B3D28C520F530260010C180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3D28C420F530260010C180 /* AppDelegate.swift */; };
-		7B3D28C720F530260010C180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3D28C620F530260010C180 /* ViewController.swift */; };
-		7B3D28CA20F530260010C180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28C820F530260010C180 /* Main.storyboard */; };
+		7B3D28C720F530260010C180 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3D28C620F530260010C180 /* AuthViewController.swift */; };
+		7B3D28CA20F530260010C180 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28C820F530260010C180 /* Auth.storyboard */; };
 		7B3D28CC20F530260010C180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28CB20F530260010C180 /* Assets.xcassets */; };
 		7B3D28CF20F530260010C180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28CD20F530260010C180 /* LaunchScreen.storyboard */; };
+		7BD5DCFC20F7CABD00BFD3AD /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5DCFB20F7CABD00BFD3AD /* Presenter.swift */; };
 		E9AB6D41234EDD244EBD3477 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4186935B071D4D537ED73F /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		4CE1CC6A05B62D12E5D21D10 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		7B3D28C120F530250010C180 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3D28C420F530260010C180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B3D28C620F530260010C180 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7B3D28C920F530260010C180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B3D28C620F530260010C180 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		7B3D28C920F530260010C180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		7B3D28CB20F530260010C180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3D28CE20F530260010C180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B3D28D020F530260010C180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD5DCFB20F7CABD00BFD3AD /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		8B4186935B071D4D537ED73F /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDC29A9CD06F7216EFC1C53 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +54,8 @@
 		7B3D28B820F530250010C180 = {
 			isa = PBXGroup;
 			children = (
+				7BF41E4620F7C8ED0039E95D /* Resourse */,
+				7BD5DCF820F7C91F00BFD3AD /* Sourse */,
 				7B3D28C320F530250010C180 /* Project */,
 				7B3D28C220F530250010C180 /* Products */,
 				6CDCF73332F9A76360D2879C /* Pods */,
@@ -70,13 +74,46 @@
 		7B3D28C320F530250010C180 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				7B3D28C420F530260010C180 /* AppDelegate.swift */,
-				7B3D28C620F530260010C180 /* ViewController.swift */,
-				7B3D28C820F530260010C180 /* Main.storyboard */,
 				7B3D28CB20F530260010C180 /* Assets.xcassets */,
 				7B3D28CD20F530260010C180 /* LaunchScreen.storyboard */,
 				7B3D28D020F530260010C180 /* Info.plist */,
 			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		7BD5DCF820F7C91F00BFD3AD /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				7B3D28C420F530260010C180 /* AppDelegate.swift */,
+				7BD5DCFA20F7CA2A00BFD3AD /* Models */,
+				7BD5DCF920F7C96A00BFD3AD /* Authorization */,
+			);
+			name = Sourse;
+			path = Project;
+			sourceTree = "<group>";
+		};
+		7BD5DCF920F7C96A00BFD3AD /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				7B3D28C820F530260010C180 /* Auth.storyboard */,
+				7B3D28C620F530260010C180 /* AuthViewController.swift */,
+				7BD5DCFB20F7CABD00BFD3AD /* Presenter.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		7BD5DCFA20F7CA2A00BFD3AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7BF41E4620F7C8ED0039E95D /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resourse;
 			path = Project;
 			sourceTree = "<group>";
 		};
@@ -150,7 +187,7 @@
 			files = (
 				7B3D28CF20F530260010C180 /* LaunchScreen.storyboard in Resources */,
 				7B3D28CC20F530260010C180 /* Assets.xcassets in Resources */,
-				7B3D28CA20F530260010C180 /* Main.storyboard in Resources */,
+				7B3D28CA20F530260010C180 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B3D28C720F530260010C180 /* ViewController.swift in Sources */,
+				7BD5DCFC20F7CABD00BFD3AD /* Presenter.swift in Sources */,
+				7B3D28C720F530260010C180 /* AuthViewController.swift in Sources */,
 				7B3D28C520F530260010C180 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,12 +228,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B3D28C820F530260010C180 /* Main.storyboard */ = {
+		7B3D28C820F530260010C180 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B3D28C920F530260010C180 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		7B3D28CD20F530260010C180 /* LaunchScreen.storyboard */ = {
