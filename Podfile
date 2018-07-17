@@ -1,10 +1,11 @@
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'Project' do
-  frameworks
+  
   use_frameworks!
 
-  
+  pod ‘SwiftLint’, :configuration => ‘Debug’ 
+  pod ‘R.swift’	
 
 end

@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B3D28C520F530260010C180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3D28C420F530260010C180 /* AppDelegate.swift */; };
-		7B3D28C720F530260010C180 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3D28C620F530260010C180 /* LoginViewController.swift */; };
-		7B3D28CA20F530260010C180 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28C820F530260010C180 /* Auth.storyboard */; };
-		7B3D28CC20F530260010C180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28CB20F530260010C180 /* Assets.xcassets */; };
-		7B3D28CF20F530260010C180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D28CD20F530260010C180 /* LaunchScreen.storyboard */; };
-		7BD5DCFC20F7CABD00BFD3AD /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5DCFB20F7CABD00BFD3AD /* LoginPresenter.swift */; };
-		7BD5DD0020F7D1AE00BFD3AD /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5DCFF20F7D1AE00BFD3AD /* RegisterPresenter.swift */; };
-		7BD5DD0220F7D1C200BFD3AD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5DD0120F7D1C200BFD3AD /* RegisterViewController.swift */; };
+		7BFB135620FE644900C6C136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB134720FE644900C6C136 /* AppDelegate.swift */; };
+		7BFB135720FE644900C6C136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB134820FE644900C6C136 /* Assets.xcassets */; };
+		7BFB135820FE644900C6C136 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB134A20FE644900C6C136 /* Auth.storyboard */; };
+		7BFB135920FE644900C6C136 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB134D20FE644900C6C136 /* LoginPresenter.swift */; };
+		7BFB135A20FE644900C6C136 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB134E20FE644900C6C136 /* LoginViewController.swift */; };
+		7BFB135B20FE644900C6C136 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB135020FE644900C6C136 /* RegisterPresenter.swift */; };
+		7BFB135C20FE644900C6C136 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB135120FE644900C6C136 /* RegisterViewController.swift */; };
+		7BFB135D20FE644900C6C136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB135220FE644900C6C136 /* LaunchScreen.storyboard */; };
+		7BFB136020FE672000C6C136 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB135F20FE672000C6C136 /* Config.swift */; };
+		7BFB136420FE67CA00C6C136 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB136320FE67CA00C6C136 /* AuthService.swift */; };
 		E9AB6D41234EDD244EBD3477 /* Pods_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4186935B071D4D537ED73F /* Pods_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CE1CC6A05B62D12E5D21D10 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		7B3D28C120F530250010C180 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B3D28C420F530260010C180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B3D28C620F530260010C180 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		7B3D28C920F530260010C180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
-		7B3D28CB20F530260010C180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7B3D28CE20F530260010C180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7B3D28D020F530260010C180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BD5DCFB20F7CABD00BFD3AD /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		7BD5DCFF20F7D1AE00BFD3AD /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
-		7BD5DD0120F7D1C200BFD3AD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7BFB134720FE644900C6C136 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BFB134820FE644900C6C136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BFB134B20FE644900C6C136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		7BFB134D20FE644900C6C136 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		7BFB134E20FE644900C6C136 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7BFB135020FE644900C6C136 /* RegisterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		7BFB135120FE644900C6C136 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7BFB135320FE644900C6C136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BFB135420FE644900C6C136 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BFB135F20FE672000C6C136 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		7BFB136320FE67CA00C6C136 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8B4186935B071D4D537ED73F /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDC29A9CD06F7216EFC1C53 /* Pods-Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,10 +62,9 @@
 		7B3D28B820F530250010C180 = {
 			isa = PBXGroup;
 			children = (
-				7BF41E4620F7C8ED0039E95D /* Resourse */,
-				7BD5DCF820F7C91F00BFD3AD /* Sourse */,
-				7B3D28C320F530250010C180 /* Project */,
+				7BFB134620FE644900C6C136 /* Source */,
 				7B3D28C220F530250010C180 /* Products */,
+				7BF41E4620F7C8ED0039E95D /* Resourse */,
 				6CDCF73332F9A76360D2879C /* Pods */,
 				B1E28937F8288BF1BE1ECF21 /* Frameworks */,
 			);
@@ -75,68 +78,70 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B3D28C320F530250010C180 /* Project */ = {
-			isa = PBXGroup;
-			children = (
-				7B3D28CB20F530260010C180 /* Assets.xcassets */,
-				7B3D28CD20F530260010C180 /* LaunchScreen.storyboard */,
-				7B3D28D020F530260010C180 /* Info.plist */,
-			);
-			path = Project;
-			sourceTree = "<group>";
-		};
-		7BD5DCF820F7C91F00BFD3AD /* Sourse */ = {
-			isa = PBXGroup;
-			children = (
-				7B3D28C420F530260010C180 /* AppDelegate.swift */,
-				7BD5DCFA20F7CA2A00BFD3AD /* Models */,
-				7BD5DCF920F7C96A00BFD3AD /* Authorization */,
-			);
-			name = Sourse;
-			path = Project;
-			sourceTree = "<group>";
-		};
-		7BD5DCF920F7C96A00BFD3AD /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				7B3D28C820F530260010C180 /* Auth.storyboard */,
-				7BD5DCFD20F7D0C200BFD3AD /* Login */,
-				7BD5DCFE20F7D18700BFD3AD /* Register */,
-			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
-		7BD5DCFA20F7CA2A00BFD3AD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7BD5DCFD20F7D0C200BFD3AD /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				7B3D28C620F530260010C180 /* LoginViewController.swift */,
-				7BD5DCFB20F7CABD00BFD3AD /* LoginPresenter.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		7BD5DCFE20F7D18700BFD3AD /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				7BD5DCFF20F7D1AE00BFD3AD /* RegisterPresenter.swift */,
-				7BD5DD0120F7D1C200BFD3AD /* RegisterViewController.swift */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
 		7BF41E4620F7C8ED0039E95D /* Resourse */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Resourse;
 			path = Project;
+			sourceTree = "<group>";
+		};
+		7BFB134620FE644900C6C136 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7BFB136220FE67A600C6C136 /* Services */,
+				7BFB135F20FE672000C6C136 /* Config.swift */,
+				7BFB134720FE644900C6C136 /* AppDelegate.swift */,
+				7BFB134820FE644900C6C136 /* Assets.xcassets */,
+				7BFB134920FE644900C6C136 /* Authorization */,
+				7BFB135220FE644900C6C136 /* LaunchScreen.storyboard */,
+				7BFB135420FE644900C6C136 /* Info.plist */,
+				7BFB135520FE644900C6C136 /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		7BFB134920FE644900C6C136 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				7BFB134A20FE644900C6C136 /* Auth.storyboard */,
+				7BFB134C20FE644900C6C136 /* Login */,
+				7BFB134F20FE644900C6C136 /* Register */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		7BFB134C20FE644900C6C136 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7BFB134D20FE644900C6C136 /* LoginPresenter.swift */,
+				7BFB134E20FE644900C6C136 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7BFB134F20FE644900C6C136 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				7BFB135020FE644900C6C136 /* RegisterPresenter.swift */,
+				7BFB135120FE644900C6C136 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		7BFB135520FE644900C6C136 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7BFB136220FE67A600C6C136 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7BFB136320FE67CA00C6C136 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B1E28937F8288BF1BE1ECF21 /* Frameworks */ = {
@@ -155,9 +160,11 @@
 			buildConfigurationList = 7B3D28D320F530260010C180 /* Build configuration list for PBXNativeTarget "Project" */;
 			buildPhases = (
 				8EE5E463C4FB75BB43CC5076 /* [CP] Check Pods Manifest.lock */,
+				7BFB134320FE610800C6C136 /* [CP] Swift Lint */,
 				7B3D28BD20F530250010C180 /* Sources */,
 				7B3D28BE20F530250010C180 /* Frameworks */,
 				7B3D28BF20F530250010C180 /* Resources */,
+				6B45E60AC47066CE27EC88AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,15 +214,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B3D28CF20F530260010C180 /* LaunchScreen.storyboard in Resources */,
-				7B3D28CC20F530260010C180 /* Assets.xcassets in Resources */,
-				7B3D28CA20F530260010C180 /* Auth.storyboard in Resources */,
+				7BFB135D20FE644900C6C136 /* LaunchScreen.storyboard in Resources */,
+				7BFB135820FE644900C6C136 /* Auth.storyboard in Resources */,
+				7BFB135720FE644900C6C136 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6B45E60AC47066CE27EC88AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project/Pods-Project-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BFB134320FE610800C6C136 /* [CP] Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		8EE5E463C4FB75BB43CC5076 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,29 +280,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD5DCFC20F7CABD00BFD3AD /* LoginPresenter.swift in Sources */,
-				7BD5DD0220F7D1C200BFD3AD /* RegisterViewController.swift in Sources */,
-				7B3D28C720F530260010C180 /* LoginViewController.swift in Sources */,
-				7B3D28C520F530260010C180 /* AppDelegate.swift in Sources */,
-				7BD5DD0020F7D1AE00BFD3AD /* RegisterPresenter.swift in Sources */,
+				7BFB135A20FE644900C6C136 /* LoginViewController.swift in Sources */,
+				7BFB135C20FE644900C6C136 /* RegisterViewController.swift in Sources */,
+				7BFB135920FE644900C6C136 /* LoginPresenter.swift in Sources */,
+				7BFB135620FE644900C6C136 /* AppDelegate.swift in Sources */,
+				7BFB135B20FE644900C6C136 /* RegisterPresenter.swift in Sources */,
+				7BFB136020FE672000C6C136 /* Config.swift in Sources */,
+				7BFB136420FE67CA00C6C136 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B3D28C820F530260010C180 /* Auth.storyboard */ = {
+		7BFB134A20FE644900C6C136 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7B3D28C920F530260010C180 /* Base */,
+				7BFB134B20FE644900C6C136 /* Base */,
 			);
 			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
-		7B3D28CD20F530260010C180 /* LaunchScreen.storyboard */ = {
+		7BFB135220FE644900C6C136 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7B3D28CE20F530260010C180 /* Base */,
+				7BFB135320FE644900C6C136 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -384,7 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Project/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nugumanov.PlayGround.Project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -399,7 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Project/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nugumanov.PlayGround.Project;
 				PRODUCT_NAME = "$(TARGET_NAME)";
