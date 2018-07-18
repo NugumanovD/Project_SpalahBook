@@ -4,6 +4,7 @@
 //
 //  Created by Nugumanov on 10.07.18.
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
+// swiftlint:disable trailing_whitespace
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -15,6 +16,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func registerButton(_ sender: Any) {
+    @IBAction private func registerButton(_ sender: Any) {
     }
 }

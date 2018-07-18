@@ -5,7 +5,7 @@
 //  Created by Nugumanov on 17.07.18.
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 //
-
+// swiftlint:disable trailing_whitespace
 import Foundation
 
 class AuthService {
@@ -16,7 +16,6 @@ class AuthService {
         case incorrectData
         case api(error: Swift.Error)
     }
-    
     
     func auth(email: String, passsword: String, completion: @escaping (String?, Error?) -> Void) {
         let urlString = Config.baseUrl + "/auth"
@@ -34,12 +33,11 @@ class AuthService {
             return
         }
         request.httpBody = jsonData
-        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
             if let error = error {
                 completion(nil, .api(error: error))
                 return
             }
-            
             guard
                 let data = data,
                 let json = try? JSONSerialization.jsonObject(with: data, options: []),
@@ -48,12 +46,9 @@ class AuthService {
             else {
                 completion(nil, .incorrectData)
                 return
-                
             }
-            
             completion(token, nil)
         }
-        
         task.resume()
     }
 }
