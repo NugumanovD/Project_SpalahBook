@@ -62,9 +62,9 @@
 		7B3D28B820F530250010C180 = {
 			isa = PBXGroup;
 			children = (
+				7B49BFDC20FF50D200A30F91 /* Resource */,
 				7BFB134620FE644900C6C136 /* Source */,
 				7B3D28C220F530250010C180 /* Products */,
-				7BF41E4620F7C8ED0039E95D /* Resourse */,
 				6CDCF73332F9A76360D2879C /* Pods */,
 				B1E28937F8288BF1BE1ECF21 /* Frameworks */,
 			);
@@ -78,12 +78,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7BF41E4620F7C8ED0039E95D /* Resourse */ = {
+		7B49BFDC20FF50D200A30F91 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Resourse;
-			path = Project;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		7BFB134620FE644900C6C136 /* Source */ = {

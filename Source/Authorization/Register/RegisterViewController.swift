@@ -4,10 +4,8 @@
 //
 //  Created by Nugumanov on 12.07.18.
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
-// swiftlint:disable vertical_whitespace
-// swiftlint:disable trailing_whitespace
-import UIKit
 
+import UIKit
 
 class RegisterViewController: UIViewController {
     
@@ -16,8 +14,6 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak private var emailTextField: UITextField!
     @IBOutlet weak private var passwordTextField: UITextField!
     @IBOutlet weak private var descriptionTextField: UITextField!
-    
-    
     
     @IBAction private func authorizationButtonClick(_ sender: UIButton) {
     }

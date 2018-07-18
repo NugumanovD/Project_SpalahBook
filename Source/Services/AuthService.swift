@@ -5,7 +5,7 @@
 //  Created by Nugumanov on 17.07.18.
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 //
-// swiftlint:disable trailing_whitespace
+
 import Foundation
 
 class AuthService {
