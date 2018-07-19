@@ -17,7 +17,7 @@ class RegisterService {
         case api(error: Swift.Error)
     }
     
-    func register(name: String, description: String, email: String, password: String, image: String, complation: @escaping (String?, Error?)-> Void) {
+    func register(name: String, description: String, email: String, password: String, image: String, complation: @escaping (String?, Error?) -> Void) {
         let urlString = Config.baseUrl + "/auth"
         
         guard let url = URL(string: urlString) else {

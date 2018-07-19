@@ -9,9 +9,4 @@
 import UIKit
 
 class AuthRouter {
-    
-    func instantiateViewController() {
-       
-    }
-    
 }
