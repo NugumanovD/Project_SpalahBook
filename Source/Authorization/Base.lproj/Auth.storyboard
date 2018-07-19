@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,7 +29,7 @@
                                     <constraint firstAttribute="width" constant="300" id="BgL-5U-QPO"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00f-dh-taI">
@@ -40,7 +45,7 @@
                                 <rect key="frame" x="159" y="370" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
-                                    <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S83-71-m8O"/>
+                                    <action selector="registerButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nm2-91-GOc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGV-De-sDd">
@@ -48,7 +53,7 @@
                                 <state key="normal" title="Login"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.60989801255230125" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="00f-dh-taI" firstAttribute="top" secondItem="v80-Y7-0CQ" secondAttribute="bottom" constant="58" id="83A-mh-p6h"/>
                             <constraint firstItem="AGV-De-sDd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jzg-Md-kCh"/>
@@ -62,13 +67,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="AGV-De-sDd" id="t9j-qj-QXq"/>
                         <outlet property="loginTextField" destination="v80-Y7-0CQ" id="2vU-uI-DLc"/>
                         <outlet property="passTextField" destination="00f-dh-taI" id="9PM-17-H9M"/>
+                        <outlet property="registerButton" destination="xEb-OM-YKo" id="Fb8-N8-kyU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="39"/>
+            <point key="canvasLocation" x="173.59999999999999" y="38.23088455772114"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="S3q-cx-mkx">
@@ -136,7 +143,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.61354275627615062" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gPN-DD-J6m" firstAttribute="centerX" secondItem="xzn-Zf-eIO" secondAttribute="centerX" id="43l-xo-CQq"/>
                             <constraint firstItem="C0q-1Z-czq" firstAttribute="centerX" secondItem="xzn-Zf-eIO" secondAttribute="centerX" id="6H2-hP-ILH"/>
