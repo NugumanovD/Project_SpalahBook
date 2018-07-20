@@ -6,9 +6,6 @@
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 
 import UIKit
-protocol View: class {
-    
-}
 
 class LoginViewController: UIViewController {
 
@@ -20,10 +17,11 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    @IBAction private func registerButtonClick(_ sender: Any) {
-//        let vc = UIStoryboard(name: "Auth", bundle: nil)
-//        let initialVC = vc.instantiateViewController(withIdentifier: "RegisterViewController")
-//        self.present(initialVC, animated: true, completion: nil)
+    @IBAction func onLoginButonClick(_ sender: UIButton) {
     }
+    
+    @IBAction private func onRegisterButtonClick(_ sender: Any) {
+        
+    }
+
 }

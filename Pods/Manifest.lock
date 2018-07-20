@@ -1,24 +1,28 @@
 PODS:
+  - KeychainSwift (11.0.0)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
   - SwiftLint (0.25.1)
 
 DEPENDENCIES:
+  - KeychainSwift
   - R.swift
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - KeychainSwift
     - R.swift
     - R.swift.Library
     - SwiftLint
 
 SPEC CHECKSUMS:
+  KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
 
-PODFILE CHECKSUM: 075500b92f887b84dbf1a299c35e7f513b611157
+PODFILE CHECKSUM: 4a5a8b456efa00a12610829cf069da988036a21f
 
 COCOAPODS: 1.5.3

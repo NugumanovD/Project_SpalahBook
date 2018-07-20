@@ -7,5 +7,5 @@ target 'Project' do
 
   pod ‘SwiftLint’, :configuration => ‘Debug’ 
   pod ‘R.swift’	
-
+  pod 'KeychainSwift'
 end

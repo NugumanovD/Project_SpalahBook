@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B3B58BF210089F900B7CF85 /* RegisterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B58BE210089F900B7CF85 /* RegisterService.swift */; };
-		7B49BFDE20FF7AFC00A30F91 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49BFDD20FF7AFC00A30F91 /* AuthRouter.swift */; };
+		7B4221632100F4CD00C33CCD /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4221622100F4CD00C33CCD /* AuthScreen.swift */; };
 		7BFB135620FE644900C6C136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB134720FE644900C6C136 /* AppDelegate.swift */; };
 		7BFB135720FE644900C6C136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB134820FE644900C6C136 /* Assets.xcassets */; };
 		7BFB135820FE644900C6C136 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB134A20FE644900C6C136 /* Auth.storyboard */; };
@@ -24,9 +23,8 @@
 
 /* Begin PBXFileReference section */
 		4CE1CC6A05B62D12E5D21D10 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
-		7B3B58BE210089F900B7CF85 /* RegisterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterService.swift; sourceTree = "<group>"; };
 		7B3D28C120F530250010C180 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B49BFDD20FF7AFC00A30F91 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		7B4221622100F4CD00C33CCD /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		7BFB134720FE644900C6C136 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BFB134820FE644900C6C136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BFB134B20FE644900C6C136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -82,6 +80,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7B4221642100FFB000C33CCD /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				7BFB134920FE644900C6C136 /* Authorization */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		7B49BFDC20FF50D200A30F91 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +98,11 @@
 		7BFB134620FE644900C6C136 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				7BFB136220FE67A600C6C136 /* Services */,
 				7BFB135F20FE672000C6C136 /* Config.swift */,
 				7BFB134720FE644900C6C136 /* AppDelegate.swift */,
+				7BFB136220FE67A600C6C136 /* Services */,
 				7BFB134820FE644900C6C136 /* Assets.xcassets */,
-				7BFB134920FE644900C6C136 /* Authorization */,
+				7B4221642100FFB000C33CCD /* Screen */,
 				7BFB135220FE644900C6C136 /* LaunchScreen.storyboard */,
 				7BFB135420FE644900C6C136 /* Info.plist */,
 				7BFB135520FE644900C6C136 /* Models */,
@@ -107,9 +113,10 @@
 		7BFB134920FE644900C6C136 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				7BFB134A20FE644900C6C136 /* Auth.storyboard */,
+				7B4221622100F4CD00C33CCD /* AuthScreen.swift */,
 				7BFB134C20FE644900C6C136 /* Login */,
 				7BFB134F20FE644900C6C136 /* Register */,
+				7BFB134A20FE644900C6C136 /* Auth.storyboard */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -142,9 +149,7 @@
 		7BFB136220FE67A600C6C136 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7B49BFDD20FF7AFC00A30F91 /* AuthRouter.swift */,
 				7BFB136320FE67CA00C6C136 /* AuthService.swift */,
-				7B3B58BE210089F900B7CF85 /* RegisterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -235,10 +240,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Project/Pods-Project-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,9 +298,8 @@
 				7BFB135620FE644900C6C136 /* AppDelegate.swift in Sources */,
 				7BFB135B20FE644900C6C136 /* RegisterPresenter.swift in Sources */,
 				7BFB136020FE672000C6C136 /* Config.swift in Sources */,
-				7B3B58BF210089F900B7CF85 /* RegisterService.swift in Sources */,
-				7B49BFDE20FF7AFC00A30F91 /* AuthRouter.swift in Sources */,
 				7BFB136420FE67CA00C6C136 /* AuthService.swift in Sources */,
+				7B4221632100F4CD00C33CCD /* AuthScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

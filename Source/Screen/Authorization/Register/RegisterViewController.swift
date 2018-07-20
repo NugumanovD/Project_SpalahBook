@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController, View {
+class RegisterViewController: UIViewController {
     
     @IBOutlet weak private var imageView: UIImageView!
     @IBOutlet weak private var nameTextField: UITextField!
@@ -19,8 +19,6 @@ class RegisterViewController: UIViewController, View {
     }
     
     @IBAction private func backButtonClick(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Auth", bundle: nil)
-        let initialVC = vc.instantiateViewController(withIdentifier: "LoginViewController")
-        self.present(initialVC, animated: true, completion: nil)
+        
     }
 }
