@@ -6,22 +6,50 @@
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 
 import UIKit
+protocol LoginPresenterProtocol {
+    func registrationClick()
+}
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak private var passTextField: UITextField!
-    @IBOutlet weak private var loginTextField: UITextField!
-    @IBOutlet weak private var registerButton: UIButton!
-    @IBOutlet weak private var loginButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak private var emailField: UITextField!
+    @IBOutlet weak private var passwordField: UITextField!
+    
+    private var presenter: LoginPresenterProtocol?
+    
+    // MARK: - Attachments
+    
+    func attach(presenter: LoginPresenterProtocol) {
+        self.presenter = presenter
     }
+    
+    // MARK: - IBActions
+    
     @IBAction func onLoginButonClick(_ sender: UIButton) {
     }
     
     @IBAction private func onRegisterButtonClick(_ sender: Any) {
-        
+        presenter?.registrationClick()
     }
+    
+}
 
+// MARK: - LoginView
+
+extension LoginViewController: LoginView {
+    
+}
+
+// MARK: - UITextFieldDelegate
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case emailField: passwordField.becomeFirstResponder()
+        default: textField.resignFirstResponder()
+        }
+        
+        return true
+    }
 }

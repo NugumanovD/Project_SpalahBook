@@ -7,5 +7,5 @@
 //
 
 enum Config {
-    static let baseUrl: String = "http://google.com"
+    static let baseUrl: String = "https://spalahswiftchat.appspot.com"
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class AuthService {
     
@@ -82,10 +82,22 @@ class AuthService {
                     completion(nil, .incorrectData)
                     return
             }
-            
             completion(token, nil)
         }
-        
         task.resume()
+    }
+}
+
+// MARK: - LoginInteractor
+
+extension AuthService: LoginInteractor {
+    
+}
+
+// MARK: - RegisterInteractor
+
+extension AuthService: RegisterInteractor {
+   func register(name: String, email: String, password: String, description: String, completion: @escaping (String?, Swift.Error?) -> Void) {
+        send(task: .register(name: name, description: description, email: email, password: password, image: ""), completion: completion)
     }
 }

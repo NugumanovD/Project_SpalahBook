@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B4221632100F4CD00C33CCD /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4221622100F4CD00C33CCD /* AuthScreen.swift */; };
+		7B49EC7B21048A1A002B7A51 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49EC7A21048A1A002B7A51 /* Auth.swift */; };
 		7BFB135620FE644900C6C136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB134720FE644900C6C136 /* AppDelegate.swift */; };
 		7BFB135720FE644900C6C136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB134820FE644900C6C136 /* Assets.xcassets */; };
 		7BFB135820FE644900C6C136 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BFB134A20FE644900C6C136 /* Auth.storyboard */; };
@@ -25,6 +26,7 @@
 		4CE1CC6A05B62D12E5D21D10 /* Pods-Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project/Pods-Project.debug.xcconfig"; sourceTree = "<group>"; };
 		7B3D28C120F530250010C180 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4221622100F4CD00C33CCD /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
+		7B49EC7A21048A1A002B7A51 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		7BFB134720FE644900C6C136 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BFB134820FE644900C6C136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BFB134B20FE644900C6C136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		7BFB135520FE644900C6C136 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7B49EC7A21048A1A002B7A51 /* Auth.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				7BFB136020FE672000C6C136 /* Config.swift in Sources */,
 				7BFB136420FE67CA00C6C136 /* AuthService.swift in Sources */,
 				7B4221632100F4CD00C33CCD /* AuthScreen.swift in Sources */,
+				7B49EC7B21048A1A002B7A51 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
