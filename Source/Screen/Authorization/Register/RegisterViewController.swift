@@ -15,7 +15,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak private var nameTextField: UITextField!
     @IBOutlet weak private var emailTextField: UITextField!
     @IBOutlet weak private var passwordTextField: UITextField!
-    @IBOutlet weak private var descriptionTextField: UITextField!
+    @IBOutlet weak private var descriptionTextView: UITextView!
     
     private var presenter: RegisterPresenterProtocol?
     
@@ -31,7 +31,7 @@ class RegisterViewController: UIViewController {
         guard let name = nameTextField.text,
             let email = emailTextField.text,
             let password = passwordTextField.text,
-            let description = descriptionTextField.text else {
+            let description = descriptionTextView.text else {
                 // IS EMPTY
                 // TEXT USER
                 return
