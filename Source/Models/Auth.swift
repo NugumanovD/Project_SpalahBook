@@ -22,6 +22,8 @@ class Auth {
             }
         }
         get {
+            print(keychain)
+
             return keychain.get(storeIdentifier)
         }
     }

@@ -41,11 +41,6 @@ class RegisterViewController: UIViewController {
         
         let image = imageView.image
         presenter?.register(name: name, email: email, password: password, description: description, image: image)
-        
-    }
-    
-    @IBAction private func backButtonClick(_ sender: UIButton) {
-        
     }
 }
 

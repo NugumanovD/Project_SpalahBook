@@ -6,8 +6,10 @@
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 
 import UIKit
+
 protocol LoginPresenterProtocol {
     func registrationClick()
+    func authorization(email: String, password: String)
 }
 
 class LoginViewController: UIViewController {
@@ -26,10 +28,17 @@ class LoginViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func onLoginButonClick(_ sender: UIButton) {
+        guard let email = emailField.text,
+            let password = passwordField.text else {
+                return
+        }
+        presenter?.authorization(email: email, password: password)
+        
     }
     
     @IBAction private func onRegisterButtonClick(_ sender: Any) {
         presenter?.registrationClick()
+        
     }
     
 }
@@ -37,6 +46,9 @@ class LoginViewController: UIViewController {
 // MARK: - LoginView
 
 extension LoginViewController: LoginView {
+    func handleAuth(error: Error) {
+        print(error)
+    }
     
 }
 

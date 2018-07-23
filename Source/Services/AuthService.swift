@@ -85,12 +85,17 @@ class AuthService {
             completion(token, nil)
         }
         task.resume()
+       
     }
+    
 }
 
 // MARK: - LoginInteractor
 
 extension AuthService: LoginInteractor {
+   func authorization(email: String, password: String, completion: @escaping (String?, Swift.Error?) -> Void) {
+        send(task: .auth(email: email, password: password), completion: completion)
+    }
     
 }
 
