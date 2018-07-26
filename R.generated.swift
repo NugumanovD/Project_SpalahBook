@@ -115,14 +115,24 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
+      try auth.validate()
       try map.validate()
     }
     
-    struct auth: Rswift.StoryboardResourceWithInitialControllerType {
+    struct auth: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = LoginViewController
       
       let bundle = R.hostingBundle
+      let loginStoryboardIdExample = StoryboardViewControllerResource<LoginViewController>(identifier: "LoginStoryboardIdExample")
       let name = "Auth"
+      
+      func loginStoryboardIdExample(_: Void = ()) -> LoginViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: loginStoryboardIdExample)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.auth().loginStoryboardIdExample() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginStoryboardIdExample' could not be loaded from storyboard 'Auth' as 'LoginViewController'.") }
+      }
       
       fileprivate init() {}
     }

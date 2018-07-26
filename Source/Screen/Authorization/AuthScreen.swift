@@ -61,7 +61,7 @@ extension AuthScreen: LoginRouter {
 
 extension AuthScreen: RegisterRouter {
     func didRegister() {
-        // TODO: OPEN MAIN APP
+        close()
     }
     
     func didAuth() {

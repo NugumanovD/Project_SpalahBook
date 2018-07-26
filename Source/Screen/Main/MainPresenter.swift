@@ -21,7 +21,6 @@ extension MainPresenter: MainViewOutput {
         router?.openMap()
     }
 
-    
     func didLoad() {
         if !Auth.current.isAutorized {
             router?.authorize()

@@ -21,7 +21,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginStoryboardIdExample" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="173.59999999999999" y="38.23088455772114"/>
         </scene>
-        <!--Register View Controller-->
+        <!--View Controller-->
         <scene sceneID="S3q-cx-mkx">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zIX-xh-jnn" customClass="RegisterViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zIX-xh-jnn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xzn-Zf-eIO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
