@@ -12,8 +12,24 @@ final class AuthScreen {
     private weak var navigationController: UINavigationController?
     private var service: AuthService = AuthService()
     
+    private var window: UIWindow?
+    
+    func open() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.windowLevel = UIWindowLevelAlert
+        start(on: window)
+        window.makeKeyAndVisible()
+        
+        self.window = window
+    }
+    
+    func close() {
+        self.window?.isHidden = true
+        self.window = nil
+    }
+    
     func start(on window: UIWindow) {
-        guard let viewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
+        guard let viewController = R.storyboard.auth.loginStoryboardIdExample() else {
             fatalError("Unable to instantiate LoginViewController")
         }
         let presenter = LoginPresenter(router: self, interactor: service, view: viewController)
@@ -36,6 +52,7 @@ extension AuthScreen: LoginRouter {
         
         let presenter = RegisterPresenter(router: self, interactor: service, view: viewController)
         viewController.attach(presenter: presenter)
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -45,5 +62,9 @@ extension AuthScreen: LoginRouter {
 extension AuthScreen: RegisterRouter {
     func didRegister() {
         // TODO: OPEN MAIN APP
+    }
+    
+    func didAuth() {
+        close()
     }
 }

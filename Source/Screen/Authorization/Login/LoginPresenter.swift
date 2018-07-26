@@ -9,14 +9,15 @@ import KeychainSwift
 
 protocol LoginRouter: class {
     func openRegistration()
+    func didAuth()
 }
 
 protocol LoginInteractor: class {
-    func authorization(email: String, password: String, completion: @escaping (String?, Error?) -> Void)
+    
 }
 
 protocol LoginView: class {
-    func handleAuth(error: Error)
+    
 }
 
 final class LoginPresenter {
@@ -32,21 +33,8 @@ final class LoginPresenter {
     }
 }
 extension LoginPresenter: LoginPresenterProtocol {
-    func authorization(email: String, password: String) {
-        
-        interactor.authorization(email: email, password: password) { (token, error ) in
-            if let error = error {
-                self.view?.handleAuth(error: error)
-                return
-            }
-            guard let token = token else {
-                let error = NSError(domain: "self", code: 1, userInfo: [NSLocalizedDescriptionKey: "No Token"])
-                self.view?.handleAuth(error: error)
-                return
-            }
-            Auth.current.key = token
-            
-        }
+    func didLoginClick() {
+        router.didAuth()
     }
     
     func registrationClick() {

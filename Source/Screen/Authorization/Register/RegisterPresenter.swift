@@ -48,6 +48,7 @@ extension RegisterPresenter: RegisterPresenterProtocol {
             }
             Auth.current.key = token
             self?.router.didRegister()
+            print("Register \(token)")
         }
     }
 }

@@ -22,9 +22,11 @@ class Auth {
             }
         }
         get {
-            print(keychain)
-
             return keychain.get(storeIdentifier)
         }
+    }
+    
+    var isAutorized: Bool {
+        return key != nil && key?.isEmpty == false
     }
 }

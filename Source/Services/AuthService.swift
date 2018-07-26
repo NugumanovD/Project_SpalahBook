@@ -2,14 +2,13 @@
 //  AuthService.swift
 //  Project
 //
-//  Created by Nugumanov on 17.07.18.
+//  Created by Nugumanov on 19.07.18.
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class AuthService {
-    
+final class AuthService {
     enum Error: Swift.Error {
         case badUrl
         case badJson
@@ -38,15 +37,13 @@ class AuthService {
         
         var body: [String: Any] {
             switch self {
-            case .auth(let email, let password):
-                return [ApiKeys.email.rawValue: email,
-                        ApiKeys.password.rawValue: password]
-            case .register(let name, let description, let email, let password, let image):
-                return [ApiKeys.name.rawValue: name,
-                       ApiKeys.description.rawValue: description,
-                       ApiKeys.email.rawValue: email,
-                       ApiKeys.password.rawValue: password,
-                       ApiKeys.image.rawValue: image]
+            case .auth(let email, let password): return [ApiKeys.email.rawValue: email,
+                                                         ApiKeys.password.rawValue: password]
+            case .register(let name, let description, let email, let password, let image): return [ApiKeys.name.rawValue: name,
+                                                                                                   ApiKeys.description.rawValue: description,
+                                    ApiKeys.email.rawValue: email,
+                                    ApiKeys.password.rawValue: password,
+                                    ApiKeys.image.rawValue: image]
             }
         }
     }
@@ -82,27 +79,24 @@ class AuthService {
                     completion(nil, .incorrectData)
                     return
             }
+            
             completion(token, nil)
         }
+        
         task.resume()
-       
     }
-    
 }
 
 // MARK: - LoginInteractor
 
 extension AuthService: LoginInteractor {
-   func authorization(email: String, password: String, completion: @escaping (String?, Swift.Error?) -> Void) {
-        send(task: .auth(email: email, password: password), completion: completion)
-    }
     
 }
 
 // MARK: - RegisterInteractor
 
 extension AuthService: RegisterInteractor {
-   func register(name: String, email: String, password: String, description: String, completion: @escaping (String?, Swift.Error?) -> Void) {
+    func register(name: String, email: String, password: String, description: String, completion: @escaping (String?, Swift.Error?) -> Void) {
         send(task: .register(name: name, description: description, email: email, password: password, image: ""), completion: completion)
     }
 }

@@ -6,6 +6,6 @@ target 'Project' do
   use_frameworks!
 
   pod ‘SwiftLint’, :configuration => ‘Debug’ 
-  pod ‘R.swift’	
   pod 'KeychainSwift'
+  pod ‘R.swift’    
 end
