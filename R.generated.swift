@@ -119,9 +119,7 @@ struct _R: Rswift.Validatable {
       try map.validate()
     }
     
-    struct auth: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = LoginViewController
-      
+    struct auth: Rswift.StoryboardResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let loginStoryboardIdExample = StoryboardViewControllerResource<LoginViewController>(identifier: "LoginStoryboardIdExample")
       let name = "Auth"

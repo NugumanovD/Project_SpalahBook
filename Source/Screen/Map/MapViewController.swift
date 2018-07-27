@@ -14,6 +14,7 @@ import CoreLocation
 protocol MapView: class {
     func add(annotation: UserAnnotation)
     func remove(annotation: UserAnnotation)
+    func handle(error: Error)
 }
 
 final class MapViewController: UIViewController {
@@ -32,7 +33,7 @@ final class MapViewController: UIViewController {
 private extension MapViewController {
     @IBAction func onLocationButtonClick(_ sender: UIButton) {
         let coordinate = mapView.userLocation.coordinate
-        let span = MKCoordinateSpanMake(1, 1)
+        let span = MKCoordinateSpanMake(coordinate.latitude, coordinate.longitude)
         let region = MKCoordinateRegionMake(coordinate, span)
         mapView.setRegion(region, animated: true)
     }
@@ -42,6 +43,11 @@ private extension MapViewController {
         let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
         output?.place(at: coordinate)
     }
+    
+    @IBAction func onPostClick(_ sender: UIButton) {
+        guard let coordinate = mapView.annotations.first?.coordinate else { return }
+        output?.postLocation(point: coordinate)
+        }
 }
 
 // MARK: - Attachments -
@@ -55,6 +61,10 @@ extension MapViewController {
 // MARK: - MapView -
 
 extension MapViewController: MapView {
+    func handle(error: Error) {
+        print(error)
+    }
+    
     func add(annotation: UserAnnotation) {
         mapView.addAnnotation(annotation)
     }
@@ -68,7 +78,7 @@ extension MapViewController: MapView {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-         guard let annotation = view.annotation else { return }
-         mapView.removeAnnotation(annotation)
+//         guard let annotation = view.annotation else { return }
+//         mapView.removeAnnotation(annotation)
     }
 }

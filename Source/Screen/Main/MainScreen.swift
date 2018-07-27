@@ -47,7 +47,13 @@ extension MainScreen: MainRouter {
     
     func openMap() {
         guard let navigation = viewController?.navigationController else { fatalError("No navigation found") }
-        MapScreen().push(to: navigation)
+        MapScreen(delegate: self).push(to: navigation)
     }
 }
 
+extension MainScreen: MapScreenDelegate {
+    func mapScreenDidPublication(_ screen: MapScreen) {
+        screen.back()
+    }
+    
+}

@@ -11,6 +11,7 @@ import CoreLocation
 protocol MapViewOutput {
     func didLoad()
     func place(at coordinate: CLLocationCoordinate2D)
+    func postLocation(point: CLLocationCoordinate2D)
 }
 
 final class MapPresenter {
@@ -19,6 +20,7 @@ final class MapPresenter {
     
     private var locationService: LocationService = LocationService()
     private var geoService: GeoService = GeoService()
+    private let wallService: WallService = WallService()
 }
 
 extension MapPresenter: MapViewOutput {
@@ -38,6 +40,18 @@ extension MapPresenter: MapViewOutput {
             // smoothly replacing simple annotation with detailed one
             self?.view?.remove(annotation: annotation)
             self?.view?.add(annotation: markAnnotation)
+        }
+    }
+    
+    func postLocation(point: CLLocationCoordinate2D) {
+        wallService.makePublication(latitude: Float(point.latitude), longitude: Float(point.longitude), description: "") { [weak self] error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    self?.view?.handle(error: error)
+                    return
+                }
+                self?.router?.publicationMade()
+            }
         }
     }
 }

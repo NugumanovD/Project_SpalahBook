@@ -13,11 +13,11 @@ protocol LoginRouter: class {
 }
 
 protocol LoginInteractor: class {
-    
+    func login(email: String, password: String, completion: @escaping (String?, Error?) -> Void)
 }
 
 protocol LoginView: class {
-    
+    func handle(error: Error)
 }
 
 final class LoginPresenter {
@@ -41,4 +41,20 @@ extension LoginPresenter: LoginPresenterProtocol {
         router.openRegistration()
     }
     
+    func login(email: String, password: String) {
+        interactor.login(email: email, password: password) { [weak self](key, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    self?.view?.handle(error: error)
+                    return
+                }
+                guard let key = key else {
+                    return
+                }
+                Auth.current.key = key
+                
+                self?.router.didAuth()
+            }
+        }
+    }
 }

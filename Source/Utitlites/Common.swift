@@ -6,6 +6,4 @@
 //  Copyright © 2018 Nugumanov Dima. All rights reserved.
 //
 
-//typealias Text = R.string.localizable
-
-
+typealias Text = R.string.localizable

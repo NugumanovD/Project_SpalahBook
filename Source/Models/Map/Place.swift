@@ -20,4 +20,3 @@ struct Place {
         return UserAnnotation(coordinate: coordinate, title: placemark.name, subtitle: placemark.postalCode)
     }
 }
-

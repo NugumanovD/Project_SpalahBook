@@ -8,4 +8,5 @@
 
 enum Config {
     static let baseUrl: String = "https://spalahswiftchat.appspot.com"
+//    https://spalahswiftchat.appspot.com "http://192.168.88.174:8080"
 }

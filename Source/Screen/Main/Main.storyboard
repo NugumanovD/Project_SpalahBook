@@ -19,7 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-cI-XBr">
-                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <rect key="frame" x="159.5" y="308.5" width="55" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="onAddClick:" destination="m5r-tf-IJT" eventType="touchUpInside" id="ju4-Sa-Rbm"/>
@@ -28,8 +29,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rtk-cI-XBr" firstAttribute="centerX" secondItem="T3Y-us-3aW" secondAttribute="centerX" id="Y4l-0T-oKm"/>
-                            <constraint firstItem="rtk-cI-XBr" firstAttribute="centerY" secondItem="T3Y-us-3aW" secondAttribute="centerY" id="l2K-Wf-taP"/>
+                            <constraint firstItem="rtk-cI-XBr" firstAttribute="centerY" secondItem="T3Y-us-3aW" secondAttribute="centerY" id="0eW-LV-C9b"/>
+                            <constraint firstItem="rtk-cI-XBr" firstAttribute="centerX" secondItem="T3Y-us-3aW" secondAttribute="centerX" id="RTR-u0-KPr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxc-NT-iqm"/>
                     </view>

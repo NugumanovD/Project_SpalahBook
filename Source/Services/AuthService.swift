@@ -40,10 +40,10 @@ final class AuthService {
             case .auth(let email, let password): return [ApiKeys.email.rawValue: email,
                                                          ApiKeys.password.rawValue: password]
             case .register(let name, let description, let email, let password, let image): return [ApiKeys.name.rawValue: name,
-                                                                                                   ApiKeys.description.rawValue: description,
-                                    ApiKeys.email.rawValue: email,
-                                    ApiKeys.password.rawValue: password,
-                                    ApiKeys.image.rawValue: image]
+                        ApiKeys.description.rawValue: description,
+                        ApiKeys.email.rawValue: email,
+                        ApiKeys.password.rawValue: password,
+                        ApiKeys.image.rawValue: image]
             }
         }
     }
@@ -90,7 +90,9 @@ final class AuthService {
 // MARK: - LoginInteractor
 
 extension AuthService: LoginInteractor {
-    
+    func login(email: String, password: String, completion: @escaping (String?, Swift.Error?) -> Void) {
+        send(task: .auth(email: email, password: password), completion: completion)
+    }
 }
 
 // MARK: - RegisterInteractor

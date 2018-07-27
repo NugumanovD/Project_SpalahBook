@@ -15,12 +15,14 @@ protocol MainView: class {
 final class MainViewController: UIViewController {
     private var output: MainViewOutput?
     
-    @IBAction func onAddClick(_ sender: UIButton) {
-        output?.addClickAdd()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.didLoad()
+    }
+}
+private extension MainViewController {
+    @IBAction func onAddClick(_ sender: UIButton) {
+        output?.addClickAdd()
     }
 }
 
